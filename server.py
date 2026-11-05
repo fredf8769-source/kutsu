@@ -11,6 +11,8 @@ from generic import extract, classify, CATS
 
 PORT = int(os.environ.get("PORT", 8787))
 ROOT = Path(__file__).parent / "static"
+if not (ROOT / "index.html").exists():          # если index.html загрузили в корень (например, на GitHub без папки static)
+    ROOT = Path(__file__).parent
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/130.0 Safari/537.36",
       "Accept-Language": "uk,en;q=0.8"}
