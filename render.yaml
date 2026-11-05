@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: kutsu
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    healthCheckPath: /api/info
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7

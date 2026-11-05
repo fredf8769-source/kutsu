@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KUTSU 靴 — оригинальные кроссовки по лучшей цене</title>
+<meta name="description" content="Сравнение цен на оригинальные кроссовки в магазинах Украины и Европы с проверкой на подделки.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* Белая тема с сакурой — основная. Тёмная включается только кнопкой. */
+:root{
+  --washi:#ffffff; --paper:#ffffff; --sumi:#1f1a1c; --ink2:#5e5559; --ink3:#958a8f; --line:#f2e7ea; --line2:#e8d5db;
+  --shu:#d1305a; --shu-ink:#ffffff; --shu-soft:#fde9ef; --ai:#2b4a6f; --ai-soft:#e8eef6;
+  --sakura:#f7b7c8; --sakura2:#fcd9e3; --sakura3:#e98aa4;
+  --ok:#2c6a35; --ok-soft:#e5f2e6; --warn:#86580f; --warn-soft:#f8eed9;
+  --shadow:0 1px 0 rgba(209,48,90,.04),0 14px 30px -16px rgba(150,60,90,.28);
+  --r:16px;
+}
+:root[data-theme="dark"]{
+  --washi:#141013; --paper:#1d181b; --sumi:#f3e9ec; --ink2:#bfb0b6; --ink3:#8a7c82; --line:#2e2529; --line2:#40343a;
+  --shu:#f06b8e; --shu-ink:#1b1a16; --shu-soft:#3b1d27; --ai:#94b5dc; --ai-soft:#1b2634;
+  --sakura:#b8687e; --sakura2:#4a2633; --sakura3:#f39ab2;
+  --ok:#8fd29a; --ok-soft:#1b2d1e; --warn:#e6bd6a; --warn-soft:#352a12;
+  --shadow:0 1px 0 rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--washi);color:var(--sumi);font:400 16px/1.5 "Noto Sans JP",system-ui,sans-serif;min-height:100vh;
+  -webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2.5px solid var(--shu);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+.mincho{font-family:"Shippori Mincho",serif}
+svg.i{width:16px;height:16px;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── Шапка-герой ─────────────────────────── */
+.hero{position:relative;overflow:hidden;padding:64px 0 120px;
+  background:linear-gradient(180deg,#fff 0%,#fff6f8 70%,#fdeef2 100%)}
+:root[data-theme="dark"] .hero{background:linear-gradient(180deg,var(--washi),#1f141a)}
+.sun{position:absolute;right:max(-60px,calc(50% - 720px));top:-60px;width:360px;height:360px;border-radius:50%;
+  background:radial-gradient(circle at 42% 40%,#ff8fa9,var(--shu) 70%);opacity:.92;
+  box-shadow:0 0 0 22px color-mix(in srgb,var(--shu) 8%,transparent),0 0 0 48px color-mix(in srgb,var(--shu) 4%,transparent);
+  animation:rise 1.6s cubic-bezier(.2,.8,.2,1) both, breathe 7s ease-in-out 1.6s infinite}
+@keyframes rise{from{transform:translateY(140px) scale(.85);opacity:0}to{transform:none;opacity:.92}}
+@keyframes breathe{50%{transform:scale(1.035)}}
+/* ветка сакуры */
+.branch{position:absolute;right:max(-30px,calc(50% - 700px));top:40px;width:min(560px,62vw);pointer-events:none;transform-origin:100% 0;
+  animation:sway 9s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(1.6deg)}}
+.branch .bl{transform-box:fill-box;transform-origin:center;animation:bloom .9s cubic-bezier(.2,.9,.3,1.4) both}
+@keyframes bloom{from{transform:scale(0) rotate(-40deg);opacity:0}}
+/* Фудзи и волна */
+.fuji{position:absolute;left:0;right:0;bottom:0;height:120px;pointer-events:none}
+.fuji svg{position:absolute;bottom:0;width:100%;height:100%}
+.wave{position:absolute;left:0;right:0;bottom:0;height:34px;opacity:.9;
+  background:radial-gradient(circle at 50% 100%,transparent 8px,var(--sakura) 9px,transparent 10px,transparent 14px,var(--sakura) 15px,transparent 16px) 0 0/30px 15px repeat-x,
+             radial-gradient(circle at 50% 100%,transparent 8px,var(--sakura2) 9px,transparent 10px,transparent 14px,var(--sakura2) 15px,transparent 16px) 15px 15px/30px 15px repeat-x;
+  animation:drift 22s linear infinite}
+@keyframes drift{to{background-position:300px 0,-285px 15px}}
+/* панда-талисман висит на ветке сакуры (свой рисунок) */
+.branch .bsvg{display:block;width:100%;height:auto}
+.branch{aspect-ratio:2/1;z-index:2}
+.panda{position:absolute;left:36.5%;top:37%;width:22%;margin-left:-11%;border:0;background:none;padding:0;cursor:pointer;
+  pointer-events:auto;transform-origin:50% 4%;animation:hangIn 1.1s cubic-bezier(.3,1.5,.5,1) 1.4s both}
+@keyframes hangIn{from{transform:translateY(-60%) scale(.3);opacity:0}}
+.panda svg{display:block;width:100%;height:auto;overflow:visible}
+.panda .swing{transform-origin:60px 8px;animation:hangSwing 3.6s ease-in-out infinite}
+@keyframes hangSwing{0%,100%{transform:rotate(5deg)}50%{transform:rotate(-5deg)}}
+.panda .legL{transform-origin:48px 118px;animation:dangleL 1.8s ease-in-out infinite}
+.panda .legR{transform-origin:72px 118px;animation:dangleR 1.8s ease-in-out infinite}
+@keyframes dangleL{0%,100%{transform:rotate(10deg)}50%{transform:rotate(-14deg)}}
+@keyframes dangleR{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(12deg)}}
+.panda .head{transform-origin:60px 70px;animation:nod 5s ease-in-out infinite}
+@keyframes nod{0%,100%{transform:rotate(0)}30%{transform:rotate(-6deg)}65%{transform:rotate(5deg)}}
+.panda .eyes{transform-origin:60px 56px;animation:blink 4.5s infinite}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.panda .ribbon{transform-origin:86px 47px;animation:flutter 1.3s ease-in-out infinite}
+@keyframes flutter{50%{transform:rotate(-16deg) scaleX(1.12)}}
+.panda:hover .legL,.panda:hover .legR{animation-duration:.6s}
+.panda .bubble{position:absolute;right:92%;top:30%;transform:scale(.6) translateX(10px);transform-origin:100% 50%;white-space:nowrap;background:#fff;color:var(--shu);
+  font-weight:800;font-size:13px;padding:6px 10px;border-radius:12px;box-shadow:0 6px 18px -8px rgba(209,48,90,.5);opacity:0;pointer-events:none;
+  transition:opacity .2s,transform .3s cubic-bezier(.3,1.6,.5,1)}
+.panda .bubble::after{content:"";position:absolute;left:100%;top:50%;border:6px solid transparent;border-left-color:#fff;transform:translateY(-50%)}
+/* по клику панда отпускает ветку правой лапой и машет */
+.panda .armR{transform-origin:76px 66px}
+.panda.kick .armR{animation:waveArm 2s ease-in-out}
+@keyframes waveArm{0%{transform:rotate(0)}14%{transform:rotate(62deg)}26%{transform:rotate(30deg)}38%{transform:rotate(66deg)}
+  50%{transform:rotate(30deg)}62%{transform:rotate(66deg)}76%{transform:rotate(34deg)}100%{transform:rotate(0)}}
+.panda.kick .pads{animation:showPads 2s ease-in-out}
+@keyframes showPads{10%,80%{opacity:1}0%,100%{opacity:0}}
+.panda.kick .swing{animation:leanHang 2s ease-in-out}
+@keyframes leanHang{0%{transform:rotate(5deg)}15%,80%{transform:rotate(-9deg)}100%{transform:rotate(5deg)}}
+.panda.kick .head{animation:tiltHi 2s ease-in-out}
+@keyframes tiltHi{15%,80%{transform:rotate(8deg)}}
+.panda.kick .bubble{opacity:1;transform:none}
+/* лепестки */
+#petals{position:fixed;inset:0;pointer-events:none;z-index:30}
+/* появление */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.lead .w{display:inline-block;opacity:0;transform:translateY(.5em);animation:up .8s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.card{animation:cardin .55s cubic-bezier(.2,.8,.2,1) both}
+@keyframes cardin{from{opacity:0;transform:translateY(16px) scale(.98)}}
+.tate{position:absolute;right:calc(max(-80px,calc(50% - 760px)) + 440px);top:56px;writing-mode:vertical-rl;letter-spacing:.6em;
+  color:var(--ink3);font-size:14px}
+.top{position:relative;z-index:2;display:flex;align-items:center;gap:12px}
+.lead,.stats{z-index:2}
+.logo{display:flex;align-items:center;gap:16px;text-decoration:none}
+.logo .k{font-size:84px;line-height:.85;font-weight:800}
+.logo h1{font-size:30px;letter-spacing:.42em;font-weight:800}
+.logo small{display:block;font-family:"Noto Sans JP";font-size:12px;letter-spacing:.2em;color:var(--ink3);margin-top:4px}
+.theme{position:relative;width:44px;height:44px;border-radius:50%;border:1px solid var(--line2);background:var(--paper);
+  display:grid;place-items:center;transition:transform .25s,border-color .2s}
+.theme:hover{transform:rotate(-12deg) scale(1.06);border-color:var(--shu)}
+#petalBtn{margin-left:auto;font-family:"Shippori Mincho",serif;font-weight:800;color:var(--shu);font-size:18px}
+#petalBtn[aria-pressed="false"]{color:var(--ink3)}
+.lead{position:relative;max-width:680px;margin:34px 0 0;font-size:clamp(28px,4vw,46px);line-height:1.15;font-weight:800;letter-spacing:-.01em}
+.lead em{font-style:normal;color:var(--shu)}
+.stats{position:relative;display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:16px;color:var(--ink2);font-size:14px}
+.stats b{color:var(--sumi);font-weight:700}
+
+/* поиск */
+.searchbar{position:sticky;top:0;z-index:20;padding:14px 0;background:color-mix(in srgb,var(--washi) 86%,transparent);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+.searchbar.stuck{border-bottom-color:var(--line)}
+form{display:flex;align-items:center;gap:0;background:var(--paper);border:1.5px solid var(--sumi);border-radius:999px;
+  box-shadow:var(--shadow);padding:6px 6px 6px 20px}
+form svg{color:var(--ink3)}
+form input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:18px;padding:10px 12px;color:var(--sumi);outline:none}
+form input::placeholder{color:var(--ink3)}
+form button{border:0;background:var(--shu);color:#fff;font-weight:700;font-size:15px;letter-spacing:.06em;padding:0 26px;height:48px;
+  border-radius:999px;display:flex;align-items:center;gap:8px;transition:transform .15s,background .2s}
+form button:hover{background:color-mix(in srgb,var(--shu) 86%,#000)}
+form button:active{transform:scale(.97)}
+
+/* бренды */
+.sec-label{display:flex;align-items:baseline;gap:10px;font-size:12px;letter-spacing:.22em;color:var(--ink3);margin:22px 0 10px;text-transform:uppercase}
+.sec-label .jp{letter-spacing:.3em}
+.cats{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.cats::-webkit-scrollbar{display:none}
+.cats button{flex:none;border:1px solid var(--line2);background:var(--paper);font-size:14px;padding:0 16px;height:40px;border-radius:999px;
+  color:var(--ink2);transition:all .2s}
+.cats button:hover{border-color:var(--sumi);color:var(--sumi)}
+.cats button.on{background:var(--sumi);color:var(--washi);border-color:var(--sumi)}
+.blist{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;max-height:132px;overflow-y:auto;padding:2px}
+.blist button{border:1px solid var(--line2);background:transparent;font-weight:700;font-size:13px;letter-spacing:.04em;padding:0 14px;height:38px;
+  border-radius:8px;transition:all .15s}
+.blist button:hover,.blist button.on{background:var(--shu);border-color:var(--shu);color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{border:0;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);font-size:13px;padding:0 14px;height:36px;border-radius:999px;color:var(--ink2)}
+.chips button:hover{box-shadow:inset 0 0 0 1px var(--sumi);color:var(--sumi)}
+
+/* панель результатов */
+main{padding:28px 0 60px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-bottom:18px}
+.status{flex:1 1 420px;font-size:14px;color:var(--ink2);min-height:22px}
+.status b{color:var(--sumi)}
+.ctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.toggle{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 14px;border:1px solid var(--line2);border-radius:999px;
+  background:var(--paper);font-size:13px;cursor:pointer;user-select:none}
+.toggle input{accent-color:var(--shu);width:16px;height:16px}
+select{height:40px;border:1px solid var(--line2);border-radius:999px;background:var(--paper);color:var(--sumi);font:inherit;font-size:13px;padding:0 14px}
+.tabs{display:none;gap:6px;margin-bottom:14px}
+.tabs button{flex:1;height:44px;border:1px solid var(--line2);background:var(--paper);border-radius:10px;font-weight:700}
+.tabs button.on{background:var(--sumi);color:var(--washi)}
+
+/* категории */
+.ktabs{display:flex;gap:4px;margin:4px 0 20px;padding:5px;background:var(--shu-soft);border-radius:999px;width:fit-content;max-width:100%;overflow-x:auto;position:relative}
+.ktabs button{border:0;background:transparent;height:42px;padding:0 18px;border-radius:999px;font-weight:700;font-size:14px;color:var(--ink2);
+  display:flex;align-items:center;gap:8px;white-space:nowrap;position:relative;z-index:1;transition:color .25s}
+.ktabs button .n{font-size:11px;font-weight:700;background:var(--paper);color:var(--ink3);border-radius:999px;padding:1px 7px;transition:all .25s}
+.ktabs button.on{color:#fff}
+.ktabs button.on .n{background:rgba(255,255,255,.25);color:#fff}
+.ktabs .pill{position:absolute;top:5px;height:42px;border-radius:999px;background:var(--shu);box-shadow:0 6px 16px -6px var(--shu);
+  transition:left .4s cubic-bezier(.3,1.3,.5,1),width .4s cubic-bezier(.3,1.3,.5,1)}
+.ktabs button:disabled{opacity:.4;cursor:default}
+.summary{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px}
+.best{display:flex;gap:14px;align-items:center;padding:14px;border-radius:var(--r);background:var(--paper);box-shadow:var(--shadow);
+  border:1px solid var(--line);text-decoration:none;position:relative;min-height:112px}
+.best .lbl{font-size:11px;letter-spacing:.18em;color:var(--shu);font-weight:700}
+.best.eu .lbl{color:var(--ai)}
+.best img{width:84px;height:84px;object-fit:contain;background:#fff;border-radius:10px}
+.best .t{font-size:14px;font-weight:500;margin:2px 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.best .p{font-size:26px;font-weight:800;margin-left:auto;white-space:nowrap}
+.best .s{font-size:12px;color:var(--ink3)}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.col h2{display:flex;align-items:baseline;gap:12px;font-size:28px;font-weight:800;padding-bottom:12px;margin-bottom:14px;border-bottom:2px solid var(--sumi)}
+.col h2 .jp{font-size:14px;color:var(--shu);letter-spacing:.25em;font-weight:600}
+.col.eu h2 .jp{color:var(--ai)}
+.col h2 small{margin-left:auto;font-family:"Noto Sans JP";font-size:12px;font-weight:400;color:var(--ink3)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px}
+
+.card{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  text-decoration:none;position:relative;transition:transform .2s ease,box-shadow .2s ease,border-color .2s}
+/* витрина товара: наклон за курсором, свечение, огромное слово-бренд позади (как в референсе) */
+.card{--rx:0deg;--ry:0deg;--mx:50%;--my:50%}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 40px -22px rgba(209,48,90,.45);border-color:var(--sakura)}
+.card .ph{aspect-ratio:1/1;background:#fff;display:grid;place-items:center;position:relative;overflow:hidden;perspective:700px}
+.card .ph .word{position:absolute;inset:auto 0 18% 0;text-align:center;font-family:"Shippori Mincho",serif;font-weight:800;
+  font-size:clamp(40px,7vw,64px);letter-spacing:-.02em;line-height:1;white-space:nowrap;color:transparent;
+  background:linear-gradient(90deg,var(--sakura3),var(--shu));-webkit-background-clip:text;background-clip:text;
+  opacity:0;transform:translateX(-30%) scale(.9);filter:blur(6px);transition:opacity .45s,transform .7s cubic-bezier(.2,.8,.2,1),filter .5s;z-index:0;
+  text-transform:uppercase}
+.card:hover .ph .word{opacity:.22;transform:none;filter:none}
+.card .ph .glow{position:absolute;left:50%;bottom:6%;width:70%;height:22%;transform:translateX(-50%) scale(.6);border-radius:50%;
+  background:radial-gradient(closest-side,rgba(233,138,164,.75),rgba(247,183,200,.35) 55%,transparent);filter:blur(6px);
+  opacity:0;transition:opacity .4s,transform .5s cubic-bezier(.2,.8,.2,1);z-index:0}
+.card:hover .ph .glow{opacity:1;transform:translateX(-50%) scale(1)}
+.card .ph::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;transition:opacity .3s;
+  background:radial-gradient(circle at var(--mx) var(--my),rgba(255,255,255,.55),transparent 45%)}
+.card:hover .ph::after{opacity:1}
+.card .ph img{width:86%;height:86%;object-fit:contain;position:relative;z-index:1;
+  transform:rotateX(var(--rx)) rotateY(var(--ry));transition:transform .5s cubic-bezier(.2,.8,.2,1),filter .4s;will-change:transform}
+.card:hover .ph img{transform:rotateX(var(--rx)) rotateY(var(--ry)) translateY(-8%) scale(1.1) rotate(-8deg);
+  filter:drop-shadow(0 18px 14px rgba(120,40,70,.28))}
+.card .pr b{transition:color .3s}
+.card:hover .pr b{color:var(--shu)}
+/* заголовки проявляются из размытия, как текст в референсе */
+.blurin{opacity:0;filter:blur(14px);transform:translateY(10px);transition:opacity .9s,filter .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.blurin.in{opacity:1;filter:none;transform:none}
+.card .disc,.card .top1{z-index:2}
+.card .disc{position:absolute;top:10px;left:10px;background:var(--sumi);color:var(--washi);font-size:12px;font-weight:700;padding:3px 8px;border-radius:6px}
+.card .top1{position:absolute;top:10px;right:10px;background:var(--shu);color:#fff;font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px;letter-spacing:.06em}
+.col.eu .card .top1{background:var(--ai);color:#fff}
+.card .bd{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .st{font-size:12px;color:var(--ink3);display:flex;gap:6px;align-items:center}
+.card .t{font-size:14px;line-height:1.35;font-weight:500;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:38px}
+.card .pr{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-top:auto}
+.card .pr b{font-size:21px;font-weight:800;font-family:"Shippori Mincho",serif}
+.card .pr s{font-size:12px;color:var(--ink3)}
+.card .pr .c{font-size:12px;color:var(--ink2)}
+.ver{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:6px;width:fit-content}
+.ver svg{width:13px;height:13px}
+.ver.ok{background:var(--ok-soft);color:var(--ok)}
+.ver.caution{background:var(--warn-soft);color:var(--warn)}
+.ver.suspect{background:var(--shu-soft);color:var(--shu)}
+.card .f{font-size:11.5px;color:var(--shu)}
+.duty{font-size:11px;color:var(--ai);background:var(--ai-soft);padding:2px 7px;border-radius:5px;width:fit-content}
+.card.sus{opacity:.6}
+.card.sus:hover{opacity:1}
+.more{grid-column:1/-1;height:46px;border:1px dashed var(--line2);border-radius:10px;background:transparent;color:var(--ink2);font-weight:700}
+.more:hover{border-style:solid;color:var(--sumi)}
+.empty{grid-column:1/-1;padding:44px 16px;text-align:center;color:var(--ink2);border:1px dashed var(--line2);border-radius:var(--r);font-size:14px;line-height:1.6}
+.empty .mincho{display:block;font-size:34px;color:var(--ink3);margin-bottom:6px}
+.sk{border-radius:var(--r);aspect-ratio:3/4;background:linear-gradient(90deg,var(--paper),var(--line),var(--paper));background-size:200% 100%;animation:sk 1.2s infinite}
+@keyframes sk{to{background-position:-200% 0}}
+
+/* «Проверить также в» */
+.also{margin-top:34px;padding:20px;border:1px solid var(--line2);border-radius:var(--r);background:linear-gradient(135deg,var(--paper),var(--shu-soft))}
+.also-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:14px}
+.also-h b{font-size:20px}
+.also-h span{font-size:13px;color:var(--ink2)}
+.also-list{display:flex;flex-wrap:wrap;gap:10px}
+.also-list a{display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 18px;border-radius:12px;background:var(--paper);border:1px solid var(--line2);
+  text-decoration:none;font-weight:700;font-size:14px;transition:transform .2s,border-color .2s,box-shadow .2s}
+.also-list a:hover{transform:translateY(-3px);border-color:var(--shu);box-shadow:0 10px 20px -12px rgba(209,48,90,.5)}
+.also-list a small{font-weight:400;font-size:11px;color:var(--ink3)}
+.also-list a svg{width:14px;height:14px;color:var(--shu)}
+/* как проверяем */
+.how{border-top:1px solid var(--line);padding:46px 0 20px}
+.how h3{font-size:28px;font-weight:800;margin-bottom:20px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.step .n{font-size:34px;font-weight:800;color:var(--shu);line-height:1}
+.step b{display:block;margin:10px 0 6px}
+.step p{font-size:13.5px;color:var(--ink2)}
+footer{padding:26px 0 50px;color:var(--ink3);font-size:12.5px;line-height:1.7}
+.seigaiha{height:30px;opacity:.8;background:radial-gradient(circle at 50% 100%,transparent 8px,var(--line2) 9px,transparent 10px,transparent 14px,var(--line2) 15px,transparent 16px) 0 0/30px 15px repeat-x}
+
+@media (max-width:980px){
+  .cols{grid-template-columns:1fr}
+  .tabs{display:flex}
+  .cols .col{display:none}.cols .col.show{display:block}
+  .summary{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .tate{display:none}
+  .sun{width:260px;height:260px;top:-90px;right:-90px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .hero{padding:40px 0 26px}
+  .logo .k{font-size:60px}.logo h1{font-size:22px}.logo small{display:none}
+  .branch{width:280px;top:96px;right:-40px}
+  .hero{padding-bottom:110px}
+  form{padding:4px 4px 4px 14px}form input{font-size:16px;padding:10px 8px}
+  form button{padding:0 16px}form button span{display:none}
+  .grid{grid-template-columns:1fr 1fr;gap:10px}
+  .card .bd{padding:10px}
+  .card .pr b{font-size:18px}
+  .steps{grid-template-columns:1fr}
+  .best .p{font-size:20px}
+}
+.blist button{transition:transform .18s,background .18s,color .18s,border-color .18s}
+.blist button:hover{transform:translateY(-2px)}
+.chips button{transition:transform .18s,box-shadow .18s}
+.chips button:hover{transform:translateY(-2px)}
+form{transition:box-shadow .3s,border-color .3s}
+form:focus-within{border-color:var(--shu);box-shadow:0 0 0 5px var(--shu-soft),var(--shadow)}
+.step{transition:transform .25s,border-color .25s}
+.step:hover{transform:translateY(-4px);border-color:var(--sakura)}
+.step .n{display:inline-block;transition:transform .4s}
+.step:hover .n{transform:rotate(-8deg) scale(1.1)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+  .reveal,.lead .w{opacity:1;transform:none}#petals{display:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6M9 9l6 6"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9M4 9v11h16V9M9 20v-6h6v6"/></symbol>
+</svg>
+<canvas id="petals" aria-hidden="true"></canvas>
+<header class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="branch">
+  <svg class="bsvg" viewBox="0 0 520 260" aria-hidden="true"><g transform="translate(520 0) scale(-1 1)">
+    <g fill="none" stroke="#5a3b3f" stroke-linecap="round">
+      <path d="M-10 40 C 80 60, 150 40, 230 80 S 360 120, 430 100" stroke-width="9"/>
+      <path d="M150 52 C 175 20, 210 10, 250 6" stroke-width="5"/>
+      <path d="M260 92 C 280 130, 300 150, 340 170" stroke-width="5"/>
+      <path d="M360 112 C 390 80, 420 70, 470 66" stroke-width="4"/>
+    </g>
+    <g id="blooms"></g>
+  </g></svg>
+  <!-- панда-талисман висит на ветке (свой рисунок) -->
+  <button class="panda" id="panda" aria-label="Панда-талисман KUTSU: нажми, и он помашет лапой" title="Нажми на меня!">
+    <span class="bubble mincho" aria-hidden="true">やあ! Привет!</span>
+    <svg viewBox="0 0 120 165" aria-hidden="true">
+      <g class="swing">
+        <path d="M44 66 Q36 36 47 8" stroke="#1f1a1c" stroke-width="13" stroke-linecap="round" fill="none"/>
+        <g class="legL">
+          <path d="M48 118 Q44 132 42 142" stroke="#1f1a1c" stroke-width="15" stroke-linecap="round" fill="none"/>
+          <g transform="translate(28 140)"><path d="M0 8 q0-9 8-9 q4 0 6 4 l9 3 q5 2 5 7 v3 h-28z" fill="#f7b7c8" stroke="#d1305a" stroke-width="1.4"/><path d="M0 14 h28" stroke="#fff" stroke-width="2.6"/></g>
+        </g>
+        <g class="legR">
+          <path d="M72 118 Q76 132 78 142" stroke="#1f1a1c" stroke-width="15" stroke-linecap="round" fill="none"/>
+          <g transform="translate(92 140) scale(-1 1)"><path d="M0 8 q0-9 8-9 q4 0 6 4 l9 3 q5 2 5 7 v3 h-28z" fill="#f7b7c8" stroke="#d1305a" stroke-width="1.4"/><path d="M0 14 h28" stroke="#fff" stroke-width="2.6"/></g>
+        </g>
+        <ellipse cx="60" cy="98" rx="27" ry="29" fill="#fff" stroke="#1f1a1c" stroke-width="2"/>
+        <ellipse cx="60" cy="104" rx="15" ry="15" fill="#fdeef2"/>
+        <g class="head">
+          <circle cx="37" cy="34" r="9" fill="#1f1a1c"/><circle cx="83" cy="34" r="9" fill="#1f1a1c"/>
+          <ellipse cx="60" cy="52" rx="28" ry="24" fill="#fff" stroke="#1f1a1c" stroke-width="2"/>
+          <path d="M33 44 q27 -11 54 0 l-1 7 q-26 -10 -52 0z" fill="#d1305a"/>
+          <path class="ribbon" d="M86 46 q10 2 14 -4 M86 48 q8 6 13 4" stroke="#d1305a" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <text x="60" y="48.5" text-anchor="middle" font-size="7" fill="#fff" font-family="Shippori Mincho,serif" font-weight="800">靴</text>
+          <ellipse cx="48" cy="57" rx="7" ry="9" transform="rotate(25 48 57)" fill="#1f1a1c"/>
+          <ellipse cx="72" cy="57" rx="7" ry="9" transform="rotate(-25 72 57)" fill="#1f1a1c"/>
+          <g class="eyes"><circle cx="49" cy="56" r="2.5" fill="#fff"/><circle cx="71" cy="56" r="2.5" fill="#fff"/></g>
+          <ellipse cx="60" cy="64" rx="3.8" ry="2.8" fill="#1f1a1c"/>
+          <path d="M56 68.5 q4 4 8 0" stroke="#1f1a1c" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <ellipse cx="42" cy="66" rx="3.8" ry="2.2" fill="#f7b7c8" opacity=".85"/><ellipse cx="78" cy="66" rx="3.8" ry="2.2" fill="#f7b7c8" opacity=".85"/>
+        </g>
+        <circle cx="47" cy="8" r="7.5" fill="#1f1a1c"/>
+        <!-- правая лапа: держится за ветку, по клику отпускает и машет -->
+        <g class="armR">
+          <path d="M76 66 Q84 36 73 8" stroke="#1f1a1c" stroke-width="13" stroke-linecap="round" fill="none"/>
+          <circle cx="73" cy="8" r="7.5" fill="#1f1a1c"/>
+          <g class="pads" opacity="0"><circle cx="73" cy="9" r="3" fill="#f7b7c8"/><circle cx="68" cy="3.5" r="1.6" fill="#f7b7c8"/><circle cx="73" cy="1.5" r="1.6" fill="#f7b7c8"/><circle cx="78" cy="3.5" r="1.6" fill="#f7b7c8"/></g>
+        </g>
+      </g>
+    </svg>
+  </button>
+  </div>
+  <div class="tate mincho" aria-hidden="true">本物を、最安値で。</div>
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="/" aria-label="KUTSU — на главную">
+        <span class="k mincho">靴</span>
+        <span><h1 class="mincho">KUTSU</h1><small>ОРИГИНАЛ · ЛУЧШАЯ ЦЕНА</small></span>
+      </a>
+      <button class="theme" id="petalBtn" aria-pressed="true" aria-label="Лепестки сакуры: вкл/выкл" title="Лепестки сакуры">花</button>
+      <button class="theme" id="theme" aria-label="Сменить тему" title="Светлая / тёмная тема"><svg class="i"><use href="#i-moon"/></svg></button>
+    </div>
+    <p class="lead mincho" id="lead">Найдём <em>оригинальные</em> кроссовки дешевле — в Украине и Европе</p>
+    <div class="stats reveal" id="stats"></div>
+  </div>
+  <div class="fuji" aria-hidden="true">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0 120 L520 120 L640 34 Q660 20 680 34 L720 62 L760 46 L900 120 L1440 120 Z" fill="var(--sakura2)" opacity=".75"/>
+      <path d="M632 40 Q660 18 688 40 L676 52 L664 44 L652 54 L642 46 Z" fill="#fff" stroke="#e98aa4" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
+    </svg>
+    <div class="wave"></div>
+  </div>
+</header>
+
+<div class="searchbar" id="sb">
+  <div class="wrap">
+    <form id="f" role="search">
+      <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+      <input id="q" type="search" aria-label="Модель или бренд" placeholder="Модель или бренд: Air Force 1, Salomon XT-6, Hoka…" autocomplete="off">
+      <button type="submit"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg><span>ИСКАТЬ</span></button>
+    </form>
+  </div>
+</div>
+
+<section class="wrap" aria-label="Бренды">
+  <div class="sec-label">Бренды <span class="jp">ブランド</span> <span id="bcount"></span></div>
+  <div class="cats" id="cats" role="tablist"></div>
+  <div class="blist" id="blist"></div>
+  <div class="sec-label">Популярное <span class="jp">人気</span></div>
+  <div class="chips" id="chips"></div>
+</section>
+<div style="height:28px"></div>
+
+<main class="wrap" id="res">
+  <div class="bar">
+    <div class="status" id="status" aria-live="polite">Выберите бренд или введите модель — сравним цены и отсеем подделки.</div>
+    <div class="ctl">
+      <select id="sort" aria-label="Сортировка">
+        <option value="price">Сначала дешевле</option>
+        <option value="disc">Самая большая скидка</option>
+        <option value="store">По магазину</option>
+      </select>
+      <label class="toggle"><input type="checkbox" id="kids" checked> Без детских</label>
+      <label class="toggle"><input type="checkbox" id="sus"> Показать подозрительные</label>
+    </div>
+  </div>
+  <div class="ktabs" id="ktabs" role="tablist" aria-label="Категория товаров"></div>
+  <div class="summary" id="summary"></div>
+  <div class="tabs" id="tabs"><button class="on" data-c="ua">Украина</button><button data-c="eu">Европа</button></div>
+  <div class="cols">
+    <section class="col ua show"><h2 class="mincho">Украина <span class="jp">ウクライナ</span><small id="uaInfo"></small></h2><div class="grid" id="ua"></div></section>
+    <section class="col eu"><h2 class="mincho">Европа <span class="jp">ヨーロッパ</span><small id="euInfo"></small></h2><div class="grid" id="eu"></div></section>
+  </div>
+  <section class="also" id="also" hidden>
+    <div class="also-h"><b class="mincho">Проверить также в</b><span>Эти магазины закрыты от автоматического сравнения — откроем их поиск с вашим запросом</span></div>
+    <div class="also-list" id="alsoList"></div>
+  </section>
+</main>
+
+<section class="how">
+  <div class="wrap">
+    <h3 class="mincho">Как мы проверяем оригинал</h3>
+    <div class="steps">
+      <div class="step"><div class="n mincho">一</div><b>Только магазины оригиналов</b><p>Официальные ритейлеры, магазины брендов и проверенные бутики. Без OLX, Prom и маркетплейсов.</p></div>
+      <div class="step"><div class="n mincho">二</div><b>Независимые отзывы</b><p>Магазины с массовыми жалобами на подделки помечены «Осторожно».</p></div>
+      <div class="step"><div class="n mincho">三</div><b>Сверка цены</b><p>Сравниваем с типичной ценой у официальных магазинов: оригинал почти не бывает дешевле 45% от неё.</p></div>
+      <div class="step"><div class="n mincho">四</div><b>Признаки реплики</b><p>«Реплика», «копия», «1:1», «люкс», «Вьетнам» в описании — сразу в подозрительные.</p></div>
+    </div>
+  </div>
+</section>
+<footer class="wrap">
+  Цены берутся напрямую из магазинов в момент поиска. Европейские цены пересчитаны в гривны по курсу НБУ, без доставки.
+  «Пошлина» — заказ дороже €150: при ввозе в Украину платятся пошлина и НДС с суммы превышения.
+  Проверка автоматическая и не заменяет экспертизу конкретной пары. Intertop, Answear, MD-Fashion, Zalando и OLX закрыты от автоматического поиска — подключим через партнёрские программы.
+</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const fmt = n => Math.round(n).toLocaleString('uk-UA').replace(/,/g,' ');
+const sym = {UAH:'₴',EUR:'€',GBP:'£',USD:'$',SEK:'kr ',DKK:'kr ',CHF:'CHF '};
+const esc = s => String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ico = n => `<svg class="i" aria-hidden="true"><use href="#i-${n}"/></svg>`;
+
+/* тема: по умолчанию белая */
+try{const t=localStorage.getItem('kutsu-theme'); if(t) document.documentElement.dataset.theme=t;}catch(e){}
+$('theme').onclick=()=>{
+  const t = document.documentElement.dataset.theme==='dark'?'light':'dark';
+  document.documentElement.dataset.theme=t; try{localStorage.setItem('kutsu-theme',t)}catch(e){}
+};
+
+/* заголовок появляется по словам */
+(()=>{const el=$('lead'); let i=0;
+  el.innerHTML=el.innerHTML.split(/(<em>.*?<\/em>|\s+)/).filter(Boolean).map(p=>/^\s+$/.test(p)?p:`<span class="w" style="animation-delay:${.15+i++*.07}s">${p}</span>`).join('');})();
+
+/* цветы на ветке */
+(()=>{const g=$('blooms'), pts=[[60,44],[110,52],[175,30],[215,14],[248,8],[205,70],[262,92],[290,130],[318,152],[342,170],[300,104],[372,108],[400,82],[440,70],[470,64],[425,102]];
+  const flower=(x,y,r,d)=>`<g class="bl" style="animation-delay:${d}s" transform="translate(${x} ${y})">${[0,72,144,216,288].map(a=>
+    `<ellipse rx="${r*.55}" ry="${r}" transform="rotate(${a}) translate(0 ${-r*.9})" fill="${Math.random()<.5?'#f7b7c8':'#fbd0dc'}" stroke="#e98aa4" stroke-width=".8"/>`).join('')}
+    <circle r="${r*.32}" fill="#e2738f"/></g>`;
+  g.innerHTML=pts.map(([x,y],i)=>flower(x,y,7+Math.random()*5,.3+i*.08)).join('');})();
+
+/* падающие лепестки сакуры (canvas, пауза при скрытой вкладке) */
+(()=>{
+  const cv=$('petals'), ctx=cv.getContext('2d'), btn=$('petalBtn');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){btn.setAttribute('aria-pressed','false');return}
+  let on=true; try{on=localStorage.getItem('kutsu-petals')!=='off'}catch(e){}
+  let W,H,P=[], raf=0;
+  const fit=()=>{const d=devicePixelRatio||1;W=innerWidth;H=innerHeight;cv.width=W*d;cv.height=H*d;ctx.setTransform(d,0,0,d,0,0)};
+  const N=()=>Math.round(Math.min(46,W/32));
+  const mk=(top)=>({x:Math.random()*W,y:top?-20:Math.random()*H,s:6+Math.random()*7,vy:.5+Math.random()*1.1,vx:-.2+Math.random()*.9,
+    a:Math.random()*6.28,va:-.03+Math.random()*.06,w:Math.random()*6.28,c:Math.random()<.5?'#f7b7c8':'#fbd0dc'});
+  function petal(p){ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.a);ctx.scale(1,Math.abs(Math.cos(p.w))*.6+.4);
+    ctx.beginPath();ctx.moveTo(0,-p.s);ctx.bezierCurveTo(p.s*.9,-p.s*.6,p.s*.7,p.s*.7,0,p.s);ctx.bezierCurveTo(-p.s*.7,p.s*.7,-p.s*.9,-p.s*.6,0,-p.s);
+    ctx.fillStyle=p.c;ctx.globalAlpha=.85;ctx.fill();ctx.restore()}
+  function tick(){ctx.clearRect(0,0,W,H);
+    for(const p of P){p.y+=p.vy;p.x+=p.vx+Math.sin(p.w)*.6;p.w+=.03;p.a+=p.va;if(p.y>H+20||p.x>W+20){Object.assign(p,mk(true))}petal(p)}
+    raf=requestAnimationFrame(tick)}
+  const start=()=>{if(raf||!on)return;fit();if(!P.length)P=Array.from({length:N()},()=>mk(false));tick()};
+  const stop=()=>{cancelAnimationFrame(raf);raf=0;ctx.clearRect(0,0,W,H)};
+  btn.setAttribute('aria-pressed',on);
+  btn.onclick=()=>{on=!on;btn.setAttribute('aria-pressed',on);try{localStorage.setItem('kutsu-petals',on?'on':'off')}catch(e){};on?start():stop()};
+  addEventListener('resize',()=>{fit();P=P.slice(0,N())});
+  document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
+  start();
+})();
+
+/* панда: кунг-фу удар по клику, иногда сам по себе */
+(()=>{const p=$('panda'); if(!p) return;
+  const kick=()=>{p.classList.remove('kick'); void p.offsetWidth; p.classList.add('kick')};
+  p.addEventListener('click',kick); p.addEventListener('animationend',e=>{if(e.animationName==='waveArm') p.classList.remove('kick')});
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches) setInterval(()=>{if(!document.hidden&&scrollY<400) kick()},14000);
+})();
+
+/* плавное появление секций при прокрутке */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.step,.how h3,.sec-label').forEach(el=>{el.classList.add('reveal');io.observe(el)});
+setTimeout(()=>$('stats').classList.add('in'),700);
+/* липкий поиск */
+new IntersectionObserver(([e])=>$('sb').classList.toggle('stuck',!e.isIntersecting),{rootMargin:'-1px 0px 0px 0px'}).observe(document.querySelector('.hero'));
+
+const BRANDS={
+ 'Все':[],
+ 'Кроссовки':['Nike','Jordan','Adidas','New Balance','Puma','Reebok','Asics','Vans','Converse','Fila','Le Coq Sportif','Diadora',
+   'Karhu','Saucony','Mizuno','Onitsuka Tiger','Lacoste','Champion','Kappa','Ellesse','Sergio Tacchini','K-Swiss','Etonic',
+   'Lotto','Umbro','Hummel','Patrick','Pony','British Knights','DC Shoes','Etnies','Globe','Supra','Heelys','Skechers','Kangaroos'],
+ 'Бег':['Hoka','On Running','Brooks','Altra','Saucony','Mizuno','Asics','Salming','361°','Li-Ning','Anta','Xtep','Karhu',
+   'Inov-8','Topo Athletic','Newton','Diadora','Under Armour','Craft','Norda','Satisfy','Hylo','Tracksmith'],
+ 'Трекинг и outdoor':['Salomon','Merrell','Columbia','The North Face','La Sportiva','Scarpa','Lowa','Meindl','Hanwag','Keen',
+   'Mammut','Arc\'teryx','Dynafit','Lomer','Garmont','Zamberlan','Asolo','Jack Wolfskin','Teva','Chaco','Vibram FiveFingers','Icebug'],
+ 'Премиум-сникеры':['Veja','Autry','Golden Goose','Common Projects','Axel Arigato','Filling Pieces','Novesta','Diemme',
+   'Hoff','Ghoud','Philippe Model','Premiata','Hidnander','Kenzo','Moon Boot','Mason Garments','Spalwart','Last Resort AB',
+   'Clae','Sandro','Stepney Workers Club','Rombaut','ROA','Mephisto','ECCO','Camper','Geox','Crime London','Buscemi','D.A.T.E.',
+   'Hogan','P448','Brandblack','Represent','Android Homme'],
+ 'Люкс':['Balenciaga','Alexander McQueen','Gucci','Prada','Dior','Louis Vuitton','Off-White','Maison Margiela','Rick Owens',
+   'Bottega Veneta','Givenchy','Valentino','Versace','Burberry','Saint Laurent','Loewe','Amiri','Jacquemus','Y-3','Moncler','Stone Island'],
+ 'Ботинки и классика':['Timberland','Dr. Martens','Clarks','Red Wing','Blundstone','Wolverine','Caterpillar','Palladium',
+   'Sorel','Tommy Hilfiger','Calvin Klein','Hugo Boss','Lloyd','Sebago','Sperry','Paraboot','Grenson','Church\'s','Tod\'s','Santoni'],
+ 'Сандалии и слайды':['Birkenstock','Crocs','UGG','Havaianas','Teva','Suicoke','Oofos','Hoka Ora','Melissa','Ipanema','Rider','Kickers'],
+};
+const ALL=[...new Set(Object.values(BRANDS).flat())].sort((a,b)=>a.localeCompare(b));
+let cat='Кроссовки';
+function drawBrands(){
+  $('cats').innerHTML=Object.keys(BRANDS).map(c=>`<button role="tab" aria-selected="${c===cat}" class="${c===cat?'on':''}">${esc(c)}</button>`).join('');
+  [...$('cats').children].forEach(b=>b.onclick=()=>{cat=b.textContent;drawBrands()});
+  const names = cat==='Все'?ALL:BRANDS[cat];
+  $('blist').innerHTML=names.map(n=>`<button>${esc(n)}</button>`).join('');
+  [...$('blist').children].forEach(b=>b.onclick=()=>{$('q').value=b.textContent;go()});
+  $('bcount').textContent='· '+ALL.length;
+}
+drawBrands();
+$('chips').innerHTML=['Nike Air Force 1','Adidas Samba','New Balance 550','Nike Dunk Low','Asics Gel-Kayano','Air Jordan 1','Salomon XT-6',
+  'New Balance 9060','Adidas Gazelle','Nike Air Max 90','Hoka Clifton','Onitsuka Tiger Mexico 66'].map(t=>`<button>${esc(t)}</button>`).join('');
+[...$('chips').children].forEach(b=>b.onclick=()=>{$('q').value=b.textContent;go()});
+
+/* вкладки на мобильном */
+[...$('tabs').children].forEach(b=>b.onclick=()=>{
+  [...$('tabs').children].forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('.cols .col').forEach(c=>c.classList.toggle('show',c.classList.contains(b.dataset.c)));
+});
+
+const VER={ok:['check','Оригинал'],caution:['alert','Осторожно'],suspect:['x','Вероятно подделка']};
+/* слово позади товара: бренд из названия (или из поставщика) */
+const BRAND_RE=new RegExp('\\b('+ALL.map(b=>b.replace(/[.*+?^${}()|[\]\\']/g,'\\$&')).sort((a,b)=>b.length-a.length).join('|')+')\\b','i');
+function brandWord(it){const m=(it.title+' '+(it.vendor||'')).match(BRAND_RE); return m?m[1]:(it.vendor||it.store).split(' ')[0]}
+const CAT={shoes:'Обувь',socks:'Носки',apparel:'Одежда',acc:'Аксессуары'};
+let kcat='shoes';
+function drawKtabs(){
+  const c=(last&&last.counts)||{};
+  $('ktabs').innerHTML='<span class="pill"></span>'+Object.keys(CAT).map(k=>
+    `<button role="tab" aria-selected="${k===kcat}" data-k="${k}" class="${k===kcat?'on':''}" ${last&&!c[k]?'disabled':''}>${CAT[k]} <span class="n">${c[k]??0}</span></button>`).join('');
+  [...$('ktabs').querySelectorAll('button')].forEach(b=>b.onclick=()=>{kcat=b.dataset.k;shown.ua=shown.eu=PAGE;drawKtabs();show()});
+  requestAnimationFrame(()=>{const on=$('ktabs').querySelector('button.on'),p=$('ktabs').querySelector('.pill');
+    if(on&&p){p.style.left=on.offsetLeft+'px';p.style.width=on.offsetWidth+'px'}});
+}
+/* 3D-наклон карточки за курсором */
+document.addEventListener('pointermove',e=>{
+  const c=e.target.closest&&e.target.closest('.card'); if(!c||e.pointerType!=='mouse') return;
+  const r=c.getBoundingClientRect(), x=(e.clientX-r.left)/r.width, y=(e.clientY-r.top)/r.height;
+  c.style.setProperty('--ry',((x-.5)*22).toFixed(1)+'deg'); c.style.setProperty('--rx',((.5-y)*14).toFixed(1)+'deg');
+  c.style.setProperty('--mx',(x*100).toFixed(0)+'%'); c.style.setProperty('--my',(y*100).toFixed(0)+'%');
+});
+document.addEventListener('pointerout',e=>{const c=e.target.closest&&e.target.closest('.card');
+  if(c&&!c.contains(e.relatedTarget)){c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')}});
+/* пересчёт цифр, как в референсе */
+function countUp(el){
+  const to=+el.dataset.to; if(!to||matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=fmt(to)+(el.dataset.suf||'');return}
+  const t0=performance.now(), d=900, from=Math.round(to*.55);
+  const step=t=>{const k=Math.min(1,(t-t0)/d), e=1-Math.pow(1-k,3); el.textContent=fmt(from+(to-from)*e)+(el.dataset.suf||''); if(k<1) requestAnimationFrame(step)};
+  requestAnimationFrame(step);
+}
+const disc = it => it.old_price ? Math.round((1-it.price/it.old_price)*100) : 0;
+function card(it,best){
+  const local=it.currency==='UAH', s=sym[it.currency]??(it.currency+' '), v=VER[it.verdict], d=disc(it);
+  const trust=(last.trust||{})[it.trust]||'';
+  return `<a class="card${it.verdict==='suspect'?' sus':''}" href="${esc(it.url)}" target="_blank" rel="noopener nofollow">
+    <div class="ph"><span class="word" aria-hidden="true">${esc(brandWord(it))}</span><span class="glow" aria-hidden="true"></span>
+      <img src="${esc(it.image)}" alt="${esc(it.title)}" loading="lazy" width="300" height="300" onerror="this.style.visibility='hidden'">
+      ${d>=5?`<span class="disc">−${d}%</span>`:''}${it===best?'<span class="top1">最安 ЛУЧШАЯ</span>':''}</div>
+    <div class="bd">
+      <div class="st">${ico('store')}${esc(it.store)} · ${esc(it.country)}</div>
+      <div class="t">${esc(it.title)}</div>
+      <span class="ver ${it.verdict}" title="${esc(trust)}">${ico(v[0])}${v[1]}</span>
+      ${it.flags&&it.flags.length?`<div class="f">${esc(it.flags.join(' · '))}</div>`:''}
+      ${it.duty?'<span class="duty">пошлина: дороже €150</span>':''}
+      <div class="pr"><b>${fmt(it.price_uah)} ₴</b>
+        ${!local?`<span class="c">${s}${it.price.toFixed(2)}</span>`:''}
+        ${it.old_price?`<s>${local?fmt(it.old_price)+' ₴':s+it.old_price.toFixed(2)}</s>`:''}</div>
+    </div></a>`;
+}
+const PAGE=24, shown={ua:PAGE,eu:PAGE};
+function render(key,items){
+  const el=$(key), best=items.filter(x=>x.verdict==='ok').sort((a,b)=>a.price_uah-b.price_uah)[0];
+  if(!items.length){el.innerHTML=`<div class="empty"><span class="mincho">無</span>Здесь по этому запросу ничего нет.<br>Попробуйте короче — например, только модель или бренд.</div>`;return best}
+  el.innerHTML=items.slice(0,shown[key]).map((x,i)=>card(x,best).replace('<a class="card',`<a style="animation-delay:${Math.min(i,12)*45}ms" class="card`)).join('')+
+    (items.length>shown[key]?`<button class="more" data-k="${key}">Показать ещё ${Math.min(PAGE,items.length-shown[key])} из ${items.length-shown[key]}</button>`:'');
+  const m=el.querySelector('.more'); if(m) m.onclick=()=>{shown[key]+=PAGE;show()};
+  return best;
+}
+function bestCard(it,cls,label){
+  if(!it) return `<div class="best ${cls}"><div><div class="lbl">${label}</div><div class="s">Проверенных предложений нет</div></div></div>`;
+  return `<a class="best ${cls}" href="${esc(it.url)}" target="_blank" rel="noopener nofollow">
+    <img src="${esc(it.image)}" alt="" width="84" height="84" onerror="this.style.visibility='hidden'">
+    <div style="min-width:0"><div class="lbl">${label}</div><div class="t">${esc(it.title)}</div><div class="s">${esc(it.store)} · ${esc(it.country)}</div></div>
+    <div class="p mincho" data-to="${it.price_uah}" data-suf=" ₴">${fmt(it.price_uah)} ₴</div></a>`;
+}
+/* магазины, закрытые от автоматического сравнения: просто ссылки на их поиск */
+const gsite=(host,q)=>'https://www.google.com/search?q='+encodeURIComponent(`site:${host} ${q}`);
+const ALSO=[
+  {n:'Answear',  s:'Украина', u:q=>gsite('answear.ua',q)},
+  {n:'Intertop', s:'Украина', u:q=>gsite('intertop.ua',q)},
+  {n:'MD-Fashion',s:'Украина',u:q=>gsite('md-fashion.com.ua',q)},
+  {n:'Modivo',   s:'Украина', u:q=>gsite('modivo.ua',q)},
+  {n:'OLX',      s:'б/у и частники', u:q=>'https://www.olx.ua/uk/list/q-'+encodeURIComponent(q.trim().toLowerCase().replace(/\s+/g,'-'))+'/'},
+  {n:'Zalando',  s:'Польша', u:q=>'https://www.zalando.pl/catalog/?q='+encodeURIComponent(q)},
+];
+function drawAlso(q){
+  $('also').hidden=false;
+  $('alsoList').innerHTML=ALSO.map(a=>`<a href="${esc(a.u(q))}" target="_blank" rel="noopener nofollow">${esc(a.n)} <small>${esc(a.s)}</small>
+    <svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>`).join('');
+}
+let last=null;
+async function go(){
+  const q=$('q').value.trim(); if(!q) return;
+  shown.ua=shown.eu=PAGE;
+  document.querySelectorAll('#blist button').forEach(b=>b.classList.toggle('on',b.textContent.toLowerCase()===q.toLowerCase()));
+  history.replaceState(null,'','?q='+encodeURIComponent(q));
+  $('status').innerHTML=`Проверяем магазины и сверяем цены… <span class="mincho">探しています</span>`;
+  $('summary').innerHTML='';
+  ['ua','eu'].forEach(r=>{$(r).innerHTML='<div class="sk"></div>'.repeat(4);$(r+'Info').textContent=''});
+  $('res').scrollIntoView({block:'start'});
+  try{
+    last=await (await fetch('/api/search?q='+encodeURIComponent(q))).json();
+    kcat='shoes';
+    if(!last.counts.shoes){const k=Object.keys(CAT).find(k=>last.counts[k]); if(k) kcat=k;}
+    drawKtabs();
+    show();
+  }catch(e){ $('status').textContent='Ошибка поиска: '+e.message; }
+}
+function show(){
+  if(!last) return;
+  const keep=x=>x.cat===kcat&&(!$('kids').checked||!x.kids)&&($('sus').checked||x.verdict!=='suspect');
+  const srt={price:(a,b)=>a.price_uah-b.price_uah, disc:(a,b)=>disc(b)-disc(a)||a.price_uah-b.price_uah,
+             store:(a,b)=>a.store.localeCompare(b.store)||a.price_uah-b.price_uah}[$('sort').value];
+  const ua=last.ua.filter(keep).sort(srt), eu=last.eu.filter(keep).sort(srt);
+  const bu=render('ua',ua), be=render('eu',eu);
+  $('uaInfo').textContent=`${ua.length} · ${last.stores.ua.length} магазинов`;
+  $('euInfo').textContent=`${eu.length} · ${last.stores.eu.length} магазинов`;
+  $('summary').innerHTML=bestCard(bu,'ua','ЛУЧШАЯ ЦЕНА В УКРАИНЕ')+bestCard(be,'eu','ЛУЧШАЯ ЦЕНА В ЕВРОПЕ');
+  $('summary').querySelectorAll('[data-to]').forEach(countUp);
+  document.querySelectorAll('.col h2').forEach(h=>{h.classList.remove('in');h.classList.add('blurin');requestAnimationFrame(()=>requestAnimationFrame(()=>h.classList.add('in')))});
+  const hidden=[...last.ua,...last.eu].filter(x=>x.verdict==='suspect').length;
+  let s=`<b>«${esc(last.query)}»</b> · ${CAT[kcat].toLowerCase()}: ${ua.length+eu.length} предложений`;
+  if(last.ref_price) s+=` · типичная цена оригинала ≈ <b>${fmt(last.ref_price)} ₴</b>`;
+  if(bu&&be){const diff=bu.price_uah-be.price_uah;
+    s+= diff>0?` · в Европе дешевле на <b>${fmt(diff)} ₴</b> (без доставки)`:` · в Украине дешевле на <b>${fmt(-diff)} ₴</b>`;}
+  if(hidden&&!$('sus').checked) s+=` · скрыто подозрительных: ${hidden}`;
+  drawAlso(last.query);
+  if(last.failed.length) s+=` · <span title="${esc(last.failed.join(', '))}">не ответили: ${last.failed.length} маг.</span>`;
+  $('status').innerHTML=s;
+}
+['kids','sus','sort'].forEach(id=>$(id).onchange=show);
+drawKtabs(); addEventListener('resize',()=>drawKtabs());
+document.querySelectorAll('.how h3').forEach(h=>{h.classList.add('blurin');io.observe(h)});
+$('f').onsubmit=e=>{e.preventDefault();go()};
+fetch('/api/info').then(r=>r.json()).then(d=>{
+  $('stats').innerHTML=`<span><b>${d.ua+d.eu}</b> магазинов</span><span><b>${d.ua}</b> в Украине</span><span><b>${d.eu}</b> в Европе</span><span><b>${ALL.length}</b> брендов</span><span>проверка на подделку</span>`;
+}).catch(()=>{});
+const init=new URLSearchParams(location.search).get('q'); if(init){$('q').value=init;go()}
+</script>
+</body>
+</html>
